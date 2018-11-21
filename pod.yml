@@ -1,0 +1,14 @@
+apiVersion: "v1"
+kind: pod/ReplicationController/deployemnt
+metadata:
+	Name: myPod
+	labels:
+		Name: myPod
+		app: Demo
+spec:
+	containers:
+         image: nginx:latest
+		-Name: nginx
+         Ports:
+			-containersPort: 80
+			 protocol: TCP

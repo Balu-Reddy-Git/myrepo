@@ -1,0 +1,22 @@
+apiVersion: 'v1'
+kind: ReplicationControler
+metadata:
+    Name: web
+    labels:
+        Name: web
+        app: Demo
+Spec:
+    replicas: 2
+    template:
+    metadata:
+        labels:
+            Name: web
+    Spec:
+        containers:
+           -Name: web
+           Image: nginx:latest
+           Ports:
+                -containersPort: 8080
+                name: http
+                Protocol: TCP
+                    
